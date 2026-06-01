@@ -24,7 +24,7 @@ public class UserEntity {
 	private String email;
 
 	@Column(name = "password_hash", length = 255, nullable = false)
-	private String passwordHash;
+	private String password;
 
 	/* Relación con employees: FK employee_id referencia employees.employee_id */
 	@ManyToOne(optional = true)
@@ -58,12 +58,12 @@ public class UserEntity {
 		this.email = email;
 	}
 
-	public String getPasswordHash() {
-		return passwordHash;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPasswordHash(String passwordHash) {
-		this.passwordHash = passwordHash;
+	public void setPassword(String passwordHash) {
+		this.password = password;
 	}
 
 	public EmployeeEntity getEmployee() {
